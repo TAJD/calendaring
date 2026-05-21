@@ -20,12 +20,12 @@
 
 #pagebreak()
 
-= Custom cell content
+= Custom cell content (datetime callback)
 
 #let rotation = ("KB-S&C", "KB-cond", "Cardio", "Gym", "Hyrox", "rest", "rest")
 
-#month-grid(2026, 6, cell-height: 2.2cm, cell-content: day => [
-  #text(8pt, weight: "bold")[#day]
+#month-grid(2026, 6, cell-height: 2.2cm, cell-content: date => [
+  #text(8pt, weight: "bold")[#date.day()]
   #v(2pt)
-  #text(7pt, fill: luma(120))[#rotation.at(calc.rem(day - 1, 7))]
+  #text(7pt, fill: luma(120))[#rotation.at(date.weekday() - 1)]
 ])

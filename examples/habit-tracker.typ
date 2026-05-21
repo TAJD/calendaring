@@ -12,8 +12,8 @@
   2026, 6,
   cell-width: 1fr,
   cell-height: 2.4cm,
-  cell-content: day => {
-    text(8pt, weight: "bold")[#day]
+  cell-content: date => {
+    text(8pt, weight: "bold")[#date.day()]
     v(2pt)
     stack(spacing: 2pt, ..habits.map(h => text(6.5pt)[☐ #h]))
   },
