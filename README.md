@@ -64,6 +64,24 @@ Pass a function that takes the day number and returns content:
 ])
 ```
 
+## Examples
+
+The `examples/` directory contains runnable demonstrations of distinct use cases:
+
+| File | What it shows |
+|------|---------------|
+| [`basic.typ`](examples/basic.typ) | Minimal usage, leap-year handling, Sunday-first weeks, and a simple custom-cell rotation. |
+| [`workout-log.typ`](examples/workout-log.typ) | Rotated A4 monthly training log with large handwriting cells. |
+| [`habit-tracker.typ`](examples/habit-tracker.typ) | Compact habit grid — daily checkboxes for a list of habits. |
+| [`weekend-shading.typ`](examples/weekend-shading.typ) | Grey-shade Sat/Sun by computing the weekday inside the cell callback. |
+| [`year-at-a-glance.typ`](examples/year-at-a-glance.typ) | All 12 months of a year on one A4 page via grid composition. |
+
+Compile any of them locally:
+
+```bash
+typst compile --root . examples/workout-log.typ
+```
+
 ## License
 
 MIT. See `LICENSE`.
